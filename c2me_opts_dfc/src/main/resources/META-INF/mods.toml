@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="c2me_opts_dfc"
+version="${mod_version}"
+displayName="Concurrent Chunk Management Engine (Optimizations/Density Function Compiler)"
+authors="RelativityMC, ishland"
+description='''Density function compiler for C2ME'''
+
+[[dependencies."c2me_opts_dfc"]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."c2me_opts_dfc"]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."c2me_opts_dfc"]]
+modId="c2me_base"
+mandatory=true
+versionRange="[0.2.0,)"
+ordering="NONE"
+side="BOTH"

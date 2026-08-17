@@ -1,0 +1,10 @@
+build/
+.gradle/
+run/
+run-data/
+libs/
+*.log
+*.bat
+*.ps1
+.idea/
+out/

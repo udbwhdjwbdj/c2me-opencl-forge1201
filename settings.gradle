@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name = 'MinecraftForge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+    }
+}
+
+rootProject.name = 'c2me-opencl-forge1201'
+
+include(":c2me_opts_dfc")
+include(":c2me_opts_accel_opencl")

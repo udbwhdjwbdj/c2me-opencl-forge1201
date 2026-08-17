@@ -1,0 +1,41 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All-Rights-Reserved"
+
+[[mods]]
+modId="c2me_opts_accel_opencl"
+version="${mod_version}"
+displayName="Concurrent Chunk Management Engine (Optimizations/Acceleration/OpenCL) [Forge 1.20.1 port]"
+authors="RelativityMC, ishland"
+description='''OpenCL acceleration for world generation - 1.20.1 Forge port'''
+
+[[dependencies."c2me_opts_accel_opencl"]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."c2me_opts_accel_opencl"]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."c2me_opts_accel_opencl"]]
+modId="c2me_base"
+mandatory=true
+versionRange="[0.2.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."c2me_opts_accel_opencl"]]
+modId="c2me_opts_dfc"
+mandatory=true
+versionRange="[0.2.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[mixins]]
+config="c2me_opts_accel_opencl_access.mixins.json"

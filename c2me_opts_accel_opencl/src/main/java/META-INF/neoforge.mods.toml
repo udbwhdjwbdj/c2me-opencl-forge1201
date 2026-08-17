@@ -1,0 +1,54 @@
+modLoader="javafml"
+loaderVersion="*"
+license="All-Rights-Reserved"
+issueTrackerURL="https://github.com/RelativityMC/C2ME-neoforge/issues"
+clientSideOnly = false
+showAsResourcePack = false
+showAsDataPack = false
+
+[[mods]]
+modId="c2me_opts_accel_opencl"
+version="0.4.0-alpha.0.120+1.21.1"
+displayName="Concurrent Chunk Management Engine (Optimizations/Acceleration/OpenCL)"
+logoFile="assets/c2me/icon.png"
+authors="RelativityMC, ishland"
+description='''OpenCL acceleration for world generation'''
+displayURL = "https://github.com/RelativityMC/C2ME-neoforge"
+
+[[mixins]]
+config="c2me-opts-accel-opencl.mixins.json"
+
+[[dependencies.c2me_opts_accel_opencl]]
+modId = "minecraft"
+type = "required"
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.c2me_opts_accel_opencl]]
+modId = "c2me_base"
+type = "required"
+versionRange = "[0.4.0-alpha.0.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.c2me_opts_accel_opencl]]
+modId = "c2me_opts_dfc"
+type = "required"
+versionRange = "[0.4.0-alpha.0.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.c2me_opts_accel_opencl]]
+modId = "c2me_rewrites_chunk_system"
+type = "required"
+versionRange = "[0.4.0-alpha.0.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.c2me_opts_accel_opencl]]
+modId = "scalablelux"
+type = "optional"
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"

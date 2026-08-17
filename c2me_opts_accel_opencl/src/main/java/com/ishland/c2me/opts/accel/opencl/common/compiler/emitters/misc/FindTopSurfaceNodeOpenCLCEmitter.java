@@ -1,0 +1,46 @@
+package com.ishland.c2me.opts.accel.opencl.common.compiler.emitters.misc;
+
+import com.ishland.c2me.opts.accel.opencl.common.compiler.OpenCLCGen;
+import com.ishland.c2me.opts.dfc.common.ast.misc.FindTopSurfaceNode;
+import com.ishland.c2me.opts.dfc.common.gen.meta.ValuesMethodDefF64;
+import com.ishland.c2me.opts.dfc.common.gen.opencl.OpenCLCEmitter;
+import com.ishland.c2me.opts.dfc.common.gen.opencl.OpenCLCGenFunctionContext;
+
+public class FindTopSurfaceNodeOpenCLCEmitter implements OpenCLCEmitter<FindTopSurfaceNode> {
+   public static final FindTopSurfaceNodeOpenCLCEmitter INSTANCE = new FindTopSurfaceNodeOpenCLCEmitter();
+
+   private FindTopSurfaceNodeOpenCLCEmitter() {
+   }
+
+   public String doCLGen(FindTopSurfaceNode node, OpenCLCGenFunctionContext context, String storeTo) {
+      ValuesMethodDefF64 densityMethod = context.getGlobalContext().newDispatcherF64(node.density, context.getGlobalContext().nextMethodName());
+      ValuesMethodDefF64 upperBoundMethod = context.newVarF64(node.upperBound);
+      ValuesMethodDefF64 lowerBoundMethod = context.newVarF64(node.lowerBound);
+      StringBuilder b = new StringBuilder();
+      b.append("int32_t topCellBlockY = ((int32_t) floor(")
+         .append(context.getDelegateVar(upperBoundMethod))
+         .append(" / ")
+         .append(node.cellHeight)
+         .append(")) * ")
+         .append(node.cellHeight)
+         .append(";\n");
+      b.append("int32_t lowerBoundEval = (int32_t) ").append(context.getDelegateVar(lowerBoundMethod)).append(";\n");
+      b.append("int32_t found = 0;");
+      b.append("for (int32_t y1 = topCellBlockY; y1 > lowerBoundEval; y1 -= ").append(node.cellHeight).append(") {\n");
+      b.append("    if (");
+      if (densityMethod.isConst()) {
+         b.append(OpenCLCGen.literal(densityMethod.constValue()));
+      } else {
+         b.append(densityMethod.generatedMethod()).append("(make_sample_int32_ctx(ctx.const_data, ctx.rw_data, ctx.x, y1, ctx.z, MASK_enableFlatCache))");
+      }
+
+      b.append(" > 0.0) {\n");
+      b.append("        ").append(storeTo).append(" = (double) y1;\n");
+      b.append("        ").append("found = 1;\n");
+      b.append("        ").append("break;\n");
+      b.append("    }\n");
+      b.append("}\n");
+      b.append("if (!found) ").append(storeTo).append(" = (double) lowerBoundEval;\n");
+      return b.toString();
+   }
+}
