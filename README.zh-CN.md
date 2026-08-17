@@ -1,6 +1,6 @@
 # C2ME + OpenCL 加速 —— Minecraft 1.20.1 Forge 移植版
 
-> **AI 辅助移植**：本项目由 AI 编码助手（DeepSeek）辅助完成逆向与移植，源码仅供学习研究。
+> **AI 辅助移植**：本项目由 DeepSeek 辅助完成逆向，源码仅供学习研究。
 
 将 **C2ME**（Concurrent Chunk Management Engine）与 **C2ME OpenCL Acceleration Module** 移植并整合到 **Minecraft 1.20.1 Forge** 的完整源码工程。
 
