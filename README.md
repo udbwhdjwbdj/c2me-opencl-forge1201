@@ -8,15 +8,7 @@ A full source project that ports **C2ME** (Concurrent Chunk Management Engine) a
 
 ## 🙏 Acknowledgements
 
-This work would not exist without the original projects. Our sincere gratitude goes to:
-
-| Project | Author(s) | Role |
-|---|---|---|
-| [C2ME (Fabric)](https://github.com/RelativityMC/C2ME-fabric) | RelativityMC, ishland | Original C2ME implementation |
-| [C2ME NeoForge](https://github.com/RelativityMC/C2ME-neoforge) | RelativityMC, ishland | NeoForge port hosting the OpenCL Acceleration Module (source of this port) |
-| c2meF (unofficial 1.20.1 Forge port) | sjhub | The 1.20.1 Forge base this port is built upon |
-
-Thank you for the incredible engineering work that made chunk performance optimizations and GPU-accelerated world generation possible.
+This port would not exist without the original projects. Our sincere gratitude goes to all the authors and contributors of **C2ME (Fabric)**, **C2ME (NeoForge)** and the **c2meF** 1.20.1 Forge port — the incredible engineering work behind chunk performance optimizations and GPU-accelerated world generation. We deeply respect and thank everyone involved.
 
 ## 📦 What's in this repo
 

@@ -8,15 +8,7 @@
 
 ## 🙏 致谢
 
-本项目的诞生离不开以下三个原版模组，在此由衷感谢各位作者的卓越工程贡献：
-
-| 项目 | 作者 | 贡献 |
-|---|---|---|
-| [C2ME (Fabric)](https://github.com/RelativityMC/C2ME-fabric) | RelativityMC、ishland | C2ME 原始实现 |
-| [C2ME NeoForge](https://github.com/RelativityMC/C2ME-neoforge) | RelativityMC、ishland | NeoForge 移植版，本移植 OpenCL 加速模块的源码来源 |
-| c2meF（非官方 1.20.1 Forge 移植） | sjhub | 本移植所依赖的 1.20.1 Forge 基础 |
-
-感谢他们让区块性能优化与 GPU 加速世界生成成为可能。
+本移植的诞生离不开原版项目，衷心感谢 **C2ME (Fabric)**、**C2ME (NeoForge)** 以及 **c2meF**（1.20.1 Forge 移植版）的**所有作者与贡献者**——正是他们卓越的工程贡献，让区块性能优化与 GPU 加速世界生成成为可能，在此向每一位参与者致以最诚挚的敬意与感谢。
 
 ## 📦 仓库内容
 
