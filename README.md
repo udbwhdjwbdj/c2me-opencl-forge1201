@@ -1,6 +1,6 @@
 # C2ME + OpenCL Acceleration — Minecraft 1.20.1 Forge Port
 
-> **AI-assisted port**: This project was reverse-engineered and ported with the assistance of an AI coding agent (DeepSeek). The source is provided for learning and research purposes.
+> **AI-assisted port**: This project was reverse-engineered with the assistance of DeepSeek. The source code is provided for educational and research purposes only.
 
 A full source project that ports **C2ME** (Concurrent Chunk Management Engine) and the **C2ME OpenCL Acceleration Module** to **Minecraft 1.20.1 Forge**, integrated into a single mod.
 
